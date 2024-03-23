@@ -1,17 +1,8 @@
-// Acceso al API
-console.log("Accediste al API");
 
-// Elementos DOM
 const button = document.getElementById('btn');
 let data = document.getElementById("content");
-
-// Escucha de eventos
 button.addEventListener("click", solicitudFetch);
 
-// Límite de tiempo para el almacenamiento local en segundos
-const localStorageTimeLimit_s = 60;
-
-// Función para solicitar datos
 function solicitudFetch() {
     const users = JSON.parse(localStorage.getItem("users"));
     data.innerHTML = "";
